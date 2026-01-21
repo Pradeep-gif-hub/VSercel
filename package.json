@@ -1,21 +1,21 @@
 {
-  "name": "vsercel",
-  "displayName": "Vercel Deploy",
-  "description": "Deploy your project to Vercel directly from VS Code",
-  "version": "1.0.0",
+  "name": "ekclick",
+  "displayName": "EkClick - Vercel Deploy",
+  "description": "One-click deployment to Vercel directly from VS Code",
+  "version": "1.0.2",
   "publisher": "PradeepAwasthi",
   "license": "MIT",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.85.0"
   },
   "repository": {
-  "type": "git",
-  "url": "https://github.com/pradeep-gif-hub/VSercel"
-},
-"bugs": {
-  "url": "https://github.com/pradeep-gif-hub/VSercel/issues"
-}
-,
+    "type": "git",
+    "url": "https://github.com/pradeep-gif-hub/VSercel"
+  },
+  "bugs": {
+    "url": "https://github.com/pradeep-gif-hub/VSercel/issues"
+  },
   "categories": [
     "Other"
   ],
@@ -23,9 +23,9 @@
   "contributes": {
     "commands": [
       {
-        "command": "vsercel.deployToVercel",
-        "title": "Deploy to Vercel",
-        "category": "Vercel"
+        "command": "ekclick.deployToVercel",
+        "title": "EkClick Deploy to Vercel",
+        "category": "EkClick"
       }
     ]
   },
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/node": "^20.10.0",
     "@types/vscode": "^1.85.0",
+    "sharp": "^0.34.5",
     "typescript": "^5.3.3"
-  },
-  "dependencies": {}
+  }
 }
