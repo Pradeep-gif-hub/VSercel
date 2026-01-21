@@ -1,14 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <!-- Background circle -->
-  <circle cx="64" cy="64" r="60" fill="#000" opacity="0.1"/>
+  <defs>
+    <linearGradient id="bluGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0070F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0051D5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EC4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#BE185D;stop-opacity:1" />
+    </linearGradient>
+    <filter id="drop">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
   
-  <!-- Vercel triangle logo style -->
-  <polygon points="64,20 110,100 18,100" fill="#0070F3" opacity="0.9"/>
+  <!-- Solid background circle for contrast -->
+  <circle cx="64" cy="64" r="62" fill="#f8f9fa" opacity="1"/>
   
-  <!-- Rocket accent -->
-  <circle cx="64" cy="50" r="8" fill="#fff"/>
-  <polygon points="64,55 60,65 68,65" fill="#fff"/>
+  <!-- Large bold left angle bracket - VS Code style -->
+  <path d="M 20 24 L 48 64 L 20 104" stroke="url(#bluGrad)" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   
-  <!-- Deployment indicator (small circle at bottom) -->
-  <circle cx="64" cy="95" r="4" fill="#10B981"/>
+  <!-- Large bold right angle bracket - VS Code style -->
+  <path d="M 108 24 L 80 64 L 108 104" stroke="url(#bluGrad)" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Large central Vercel deployment triangle with filter -->
+  <g filter="url(#drop)">
+    <!-- Main triangle -->
+    <polygon points="64,18 104,90 24,90" fill="url(#bluGrad)" stroke="url(#bluGrad)" stroke-width="2"/>
+    
+    <!-- Rocket element centered in triangle -->
+    <g transform="translate(64, 55)">
+      <!-- Rocket body - larger and clearer -->
+      <rect x="-12" y="-18" width="24" height="32" rx="8" fill="url(#pinkGrad)" stroke="url(#pinkGrad)" stroke-width="1.5"/>
+      
+      <!-- Rocket tip/cone -->
+      <polygon points="0,-24 -14,-14 14,-14" fill="url(#pinkGrad)" stroke="url(#pinkGrad)" stroke-width="1.5"/>
+      
+      <!-- Rocket window -->
+      <circle cx="0" cy="-8" r="5" fill="#fff" stroke="#0070F3" stroke-width="1.5"/>
+      
+      <!-- Left flame -->
+      <polygon points="-12,14 -18,32 -8,18" fill="#FF6B35" stroke="#FF6B35" stroke-width="1"/>
+      
+      <!-- Right flame -->
+      <polygon points="12,14 18,32 8,18" fill="#FFA500" stroke="#FFA500" stroke-width="1"/>
+      
+      <!-- Center highlight on rocket -->
+      <ellipse cx="0" cy="2" rx="8" ry="10" fill="#fff" opacity="0.2"/>
+    </g>
+  </g>
+  
+  <!-- Status indicators - larger and clearer -->
+  <circle cx="18" cy="120" r="5" fill="#10B981"/>
+  <circle cx="64" cy="122" r="5" fill="#10B981"/>
+  <circle cx="110" cy="120" r="5" fill="#10B981"/>
+  
+  <!-- Connecting lines showing flow -->
+  <line x1="50" y1="64" x2="60" y2="64" stroke="#0070F3" stroke-width="2" opacity="0.6"/>
+  <line x1="68" y1="64" x2="78" y2="64" stroke="#0070F3" stroke-width="2" opacity="0.6"/>
+</svg>
 </svg>
