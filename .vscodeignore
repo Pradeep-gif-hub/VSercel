@@ -1,0 +1,10 @@
+.git
+.gitignore
+.vscode
+.DS_Store
+*.log
+node_modules
+out
+src
+tsconfig.json
+
